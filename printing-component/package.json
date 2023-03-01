@@ -1,0 +1,26 @@
+{
+  "name": "@babymotte/printing-component",
+  "version": "1.0.0",
+  "author": {
+    "name": "Michael Bachmann",
+    "email": "mbachmann@bbmsoft.net"
+  },
+  "license": "MIT",
+  "moduleType": "COMPONENT",
+  "dependencies": {
+    "@babymotte/printer-api": "file:../printer-api"
+  },
+  "serviceReferences": [
+    {
+      "name": "Printer",
+      "module": "@babymotte/printer-api",
+      "properties": [
+        {
+          "impl": "java"
+        }
+      ],
+      "cardinality": "MANDATORY",
+      "policy": "STATIC"
+    }
+  ]
+}
