@@ -6,22 +6,31 @@
     "email": "mbachmann@bbmsoft.net"
   },
   "license": "MIT",
+  "scripts": {
+    "gen": "npx wbsr-js && tsc",
+    "build": "tsc",
+    "start": "node dist",
+    "dev": "npm run build && npm start"
+  },
   "moduleType": "SERVICE_PROVIDER",
   "dependencies": {
+    "wbsr-js": "file:../../wbsr/wbsr-js",
     "@babymotte/printer-api": "file:../printer-api"
   },
-  "services": [
-    {
-      "name": "NodePrinter",
-      "interfaces": [
-        {
-          "name": "Printer",
-          "module": "@babymotte/printer-api"
-        }
-      ],
-      "properties": {
-        "impl": "node"
+  "service": {
+    "name": "NodePrinter",
+    "interfaces": [
+      {
+        "name": "Printer",
+        "module": "@babymotte/printer-api"
       }
+    ],
+    "properties": {
+      "impl": "node"
     }
-  ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "typescript": "^4.9.5"
+  }
 }
