@@ -1,5 +1,5 @@
 {
-  "name": "@babymotte/printing-component",
+  "name": "@babymotte/logging-component",
   "version": "1.0.0",
   "author": {
     "name": "Michael Bachmann",
@@ -13,15 +13,15 @@
     "dev": "npm run build && npm start"
   },
   "moduleType": "COMPONENT",
-  "component": "PrintingComponent",
+  "component": "LoggingComponent",
   "dependencies": {
-    "@babymotte/printer-api": "file:../printer-api",
+    "@babymotte/logger-api": "file:../logger-api",
     "wbsr-js": "file:../../wbsr/wbsr-js"
   },
   "serviceReferences": [
     {
-      "name": "Printer",
-      "module": "@babymotte/printer-api",
+      "name": "Logger",
+      "module": "@babymotte/logger-api",
       "properties": [
         {
           "impl": "java"

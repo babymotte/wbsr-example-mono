@@ -1,0 +1,57 @@
+{
+  "name": "@babymotte/logger-api",
+  "version": "1.0.0",
+  "author": {
+    "name": "Michael Bachmann",
+    "email": "mbachmann@bbmsoft.net"
+  },
+  "license": "MIT",
+  "moduleType": "API",
+  "dataTypes": {
+    "LogEntry": {
+      "properties": {
+        "level": {
+          "metadata": {
+            "description": "Log level"
+          },
+          "enum": [
+            "ERR",
+            "WARN",
+            "INFO",
+            "DEBUG",
+            "TRACE"
+          ]
+        },
+        "text": {
+          "metadata": {
+            "description": "The text to be logged"
+          },
+          "type": "string"
+        }
+      }
+    }
+  },
+  "interfaces": [
+    {
+      "doc": "A logger service",
+      "name": "Logger",
+      "functions": [
+        {
+          "doc": "Append a log entry to the log",
+          "name": "log",
+          "arguments": [
+            {
+              "doc": "The log entry to be appended",
+              "name": "entry",
+              "type": {
+                "import": {
+                  "name": "LogEntry"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

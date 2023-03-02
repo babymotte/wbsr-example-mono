@@ -1,5 +1,5 @@
 {
-  "name": "@babymotte/printer-impl-node",
+  "name": "@babymotte/logger-impl-node",
   "version": "1.0.0",
   "author": {
     "name": "Michael Bachmann",
@@ -15,14 +15,14 @@
   "moduleType": "SERVICE_PROVIDER",
   "dependencies": {
     "wbsr-js": "file:../../wbsr/wbsr-js",
-    "@babymotte/printer-api": "file:../printer-api"
+    "@babymotte/logger-api": "file:../logger-api"
   },
   "service": {
-    "name": "NodePrinter",
+    "name": "NodeLogger",
     "interfaces": [
       {
-        "name": "Printer",
-        "module": "@babymotte/printer-api"
+        "name": "Logger",
+        "module": "@babymotte/logger-api"
       }
     ],
     "properties": {
