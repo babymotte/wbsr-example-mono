@@ -1,6 +1,6 @@
 import { Runtime, ComponentInstance } from "wbsr-js";
 import { Logger } from "@babymotte/logger-api/Logger";
-import { LogEntryLevel } from "@babymotte/logger-api/LogEntry";
+import { LogEntryLevel } from "./@babymotte/logger-api/LogEntry";
 
 export function component(runtime: Runtime): ComponentInstance {
   const activate = () => {
