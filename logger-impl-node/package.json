@@ -14,8 +14,8 @@
   },
   "moduleType": "SERVICE_PROVIDER",
   "dependencies": {
-    "wbsr-js": "file:../../wbsr/wbsr-js",
-    "@babymotte/logger-api": "file:../logger-api"
+    "@babymotte/logger-api": "file:../logger-api",
+    "wbsr-js": "file:../../wbsr/wbsr-js"
   },
   "service": {
     "name": "NodeLogger",

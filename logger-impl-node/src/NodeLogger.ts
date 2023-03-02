@@ -1,5 +1,5 @@
 import { Runtime, ServiceInstance } from "wbsr-js";
-import { LogEntry, LogEntryLevel } from "./@babymotte/logger-api/LogEntry";
+import { LogLevel } from "./@babymotte/logger-api/LogLevel";
 
 export function service(runtime: Runtime): ServiceInstance {
   const activate = () => {
@@ -10,21 +10,21 @@ export function service(runtime: Runtime): ServiceInstance {
     console.log("NodeLogger deactivated.");
   };
 
-  const log = (entry: LogEntry) => {
+  const log = (level: LogLevel, message: string) => {
     var out;
-    switch (entry.level) {
-      case LogEntryLevel.Trace:
+    switch (level) {
+      case LogLevel.Trace:
         out = console.trace;
-      case LogEntryLevel.Debug:
+      case LogLevel.Debug:
         out = console.debug;
-      case LogEntryLevel.Info:
+      case LogLevel.Info:
         out = console.info;
-      case LogEntryLevel.Warn:
+      case LogLevel.Warn:
         out = console.warn;
-      case LogEntryLevel.Err:
+      case LogLevel.Err:
         out = console.error;
     }
-    out(entry.text);
+    out(message);
   };
 
   return { activate, deactivate, functions: { log } };

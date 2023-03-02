@@ -8,27 +8,14 @@
   "license": "MIT",
   "moduleType": "API",
   "dataTypes": {
-    "LogEntry": {
-      "properties": {
-        "level": {
-          "metadata": {
-            "description": "Log level"
-          },
-          "enum": [
-            "ERR",
-            "WARN",
-            "INFO",
-            "DEBUG",
-            "TRACE"
-          ]
-        },
-        "text": {
-          "metadata": {
-            "description": "The text to be logged"
-          },
-          "type": "string"
-        }
-      }
+    "LogLevel": {
+      "enum": [
+        "ERR",
+        "WARN",
+        "INFO",
+        "DEBUG",
+        "TRACE"
+      ]
     }
   },
   "interfaces": [
@@ -41,12 +28,19 @@
           "name": "log",
           "arguments": [
             {
-              "doc": "The log entry to be appended",
-              "name": "entry",
+              "doc": "The log level to be used",
+              "name": "level",
               "type": {
                 "import": {
-                  "name": "LogEntry"
+                  "name": "LogLevel"
                 }
+              }
+            },
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
               }
             }
           ]

@@ -1,6 +1,6 @@
 import { Runtime, ComponentInstance } from "wbsr-js";
 import { Logger } from "@babymotte/logger-api/Logger";
-import { LogEntryLevel } from "./@babymotte/logger-api/LogEntry";
+import { LogLevel } from "./@babymotte/logger-api/LogLevel";
 
 export function component(runtime: Runtime): ComponentInstance {
   const activate = () => {
@@ -8,7 +8,7 @@ export function component(runtime: Runtime): ComponentInstance {
     const logger = runtime.context["@babymotte"]["logger-api"][
       "Logger"
     ] as Logger;
-    run(logger);
+    logger.log(LogLevel.Info, "Hello, world!");
   };
 
   const deactivate = () => {
@@ -16,8 +16,4 @@ export function component(runtime: Runtime): ComponentInstance {
   };
 
   return { activate, deactivate };
-}
-
-function run(logger: Logger) {
-  logger.log({ level: LogEntryLevel.Info, text: "I'm ALIVE!!!" });
 }

@@ -1,5 +1,6 @@
-import { LogEntry } from "@babymotte/logger-api/LogEntry";
+import { Connection } from "worterbuch-js";
+import { LogLevel } from "@babymotte/logger-api/LogLevel";
   
-  export interface Logger {
-    log: (entry: LogEntry) => void
-  }
+export interface Logger {
+  log: (level: LogLevel, message: string) => void
+}
