@@ -9,6 +9,9 @@
   "moduleType": "API",
   "dataTypes": {
     "LogLevel": {
+      "metadata": {
+        "description": "The log level to be used by the logger"
+      },
       "enum": [
         "ERR",
         "WARN",

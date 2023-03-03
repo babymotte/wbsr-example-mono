@@ -5,10 +5,14 @@ import { LogLevel } from "./@babymotte/logger-api/LogLevel";
 export function component(runtime: Runtime): ComponentInstance {
   const activate = () => {
     console.log("LoggingComponent activated.");
+
     const logger = runtime.context["@babymotte"]["logger-api"][
       "Logger"
     ] as Logger;
-    logger.log(LogLevel.Info, "Hello, world!");
+
+    setInterval(() => {
+      logger.log(LogLevel.Err, "Halp! " + new Date());
+    }, 1000);
   };
 
   const deactivate = () => {
