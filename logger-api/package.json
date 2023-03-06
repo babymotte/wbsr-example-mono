@@ -47,6 +47,71 @@
               }
             }
           ]
+        },
+        {
+          "doc": "Log something with log level TRACE",
+          "name": "trace",
+          "arguments": [
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
+              }
+            }
+          ]
+        },
+        {
+          "doc": "Log something with log level DEBUG",
+          "name": "debug",
+          "arguments": [
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
+              }
+            }
+          ]
+        },
+        {
+          "doc": "Log something with log level INFO",
+          "name": "info",
+          "arguments": [
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
+              }
+            }
+          ]
+        },
+        {
+          "doc": "Log something with log level WARN",
+          "name": "warn",
+          "arguments": [
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
+              }
+            }
+          ]
+        },
+        {
+          "doc": "Log something with log level ERR",
+          "name": "error",
+          "arguments": [
+            {
+              "doc": "The message to be logged",
+              "name": "message",
+              "type": {
+                "builtin": "string"
+              }
+            }
+          ]
         }
       ]
     }

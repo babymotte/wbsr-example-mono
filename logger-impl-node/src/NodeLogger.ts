@@ -27,5 +27,29 @@ export function service(runtime: Runtime): ServiceInstance {
     out(message);
   };
 
-  return { activate, deactivate, functions: { log } };
+  const trace = (message: string) => {
+    console.trace(message);
+  };
+
+  const debug = (message: string) => {
+    console.debug(message);
+  };
+
+  const info = (message: string) => {
+    console.info(message);
+  };
+
+  const warn = (message: string) => {
+    console.warn(message);
+  };
+
+  const error = (message: string) => {
+    console.error(message);
+  };
+
+  return {
+    activate,
+    deactivate,
+    functions: { log, trace, debug, info, warn, error },
+  };
 }
