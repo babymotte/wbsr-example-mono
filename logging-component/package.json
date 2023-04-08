@@ -16,7 +16,7 @@
   "component": "LoggingComponent",
   "dependencies": {
     "@babymotte/logger-api": "file:../logger-api",
-    "wbsr-js": "file:../../wbsr/wbsr-js"
+    "wbsr-js": "^0.1.0"
   },
   "serviceReferences": [
     {
@@ -34,6 +34,6 @@
   "devDependencies": {
     "@types/node": "^18.14.2",
     "typescript": "^4.9.5",
-    "wbsr-codegen-js": "file:../../wbsr/wbsr-codegen-js"
+    "wbsr-codegen-js": "^0.1.0"
   }
 }
