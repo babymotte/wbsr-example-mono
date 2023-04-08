@@ -1,6 +1,5 @@
 import { wbsrInitComponent, ModuleComponent, ServiceInstance } from "wbsr-js";
+import { component } from "./LoggingComponent";
+import module from "./component.json";
 
-const packageJson: ModuleComponent = require("../package.json");
-const { component } = require(`./${packageJson.component}`);
-
-wbsrInitComponent(packageJson, component);
+wbsrInitComponent(module as ModuleComponent, component);

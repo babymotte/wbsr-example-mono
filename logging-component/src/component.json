@@ -1,0 +1,23 @@
+{
+  "moduleType": "COMPONENT",
+  "component": "LoggingComponent",
+  "name": "@babymotte/logging-component",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babymotte/logger-api": "file:../logger-api",
+    "wbsr-js": "file:../../wbsr/wbsr-js"
+  },
+  "serviceReferences": [
+    {
+      "name": "Logger",
+      "module": "@babymotte/logger-api",
+      "properties": [
+        {
+          "impl": "java"
+        }
+      ],
+      "cardinality": "MANDATORY",
+      "policy": "STATIC"
+    }
+  ]
+}
