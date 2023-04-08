@@ -3,10 +3,6 @@
   "component": "LoggingComponent",
   "name": "@babymotte/logging-component",
   "version": "1.0.0",
-  "dependencies": {
-    "@babymotte/logger-api": "file:../logger-api",
-    "wbsr-js": "file:../../wbsr/wbsr-js"
-  },
   "serviceReferences": [
     {
       "name": "Logger",
